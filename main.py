@@ -3,7 +3,7 @@ from models import CropFeatures
 import joblib
 
 app = FastAPI()
-model = joblib.load("ml_model/crop_model.pkl")
+model = joblib.load("crop_model.pkl")
 
 @app.post("/predict_crop")
 def predict_crop(features: CropFeatures):
